@@ -1,51 +1,27 @@
 #include "main.h"
 
 /**
- * convert_b - convert argument to binary
- * and put it in the output
- *
- * @args: list of arguments
- * @output: the result output
- *
- * Return: the number of bytes stored in buffer
+ * convert - converts number and base into string
+ * @num: input number
+ * @base: input base
+ * @lowercase: flag if hexa values need to be lowercase
+ * Return: result string
  */
-unsigned int convert_b(va_list args, buffer_t *output)
+char *convert(unsigned long int num, int base, int lowercase)
 {
-int d;
-unsigned int len = 0;
-char minus = '-';
+	static char *rep;
+	static char buffer[50];
+	char *ptr;
 
-d = va_arg(args, int);
-if (d < 0)
-{
-len += _memcpy(output, &minus, 1);
-d = -d;
-}
-len += convert_base(d, 2, "01", output);
-return (len);
-}
+	rep = (lowercase)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF";
+	ptr = &buffer[49];
+	*ptr = '\0';
+	do {
+		*--ptr = rep[num % base];
+		num /= base;
+	} while (num != 0);
 
-/**
- * convert_o - convert argument to base8
- * and put it in the output
- *
- * @args: list of arguments
- * @output: the result outpu
- *
- * Return: the number of bytes stored in buffer
- */
-unsigned int convert_o(va_list args, buffer_t *output)
-{
-int d;
-unsigned int len = 0;
-char minus = '-';
-
-d = va_arg(args, int);
-if (d < 0)
-{
-len += _memcpy(output, &minus, 1);
-d = -d;
-}
-len += convert_base(d, 8, "01234567", output);
-return (len);
+	return (ptr);
 }
