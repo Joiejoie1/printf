@@ -1,5 +1,4 @@
 # printf
-printf project in C with Obumneme Anthony Okoye Okoye
 printf
 A simple printf function built by Joy Gundu and Obumneme Anthony Okoye Okoye for Alx software Engineering School.
 
