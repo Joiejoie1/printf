@@ -2,14 +2,14 @@
 printf
 A simple printf function built by Joy Gundu and Obumneme Anthony Okoye Okoye for Alx software Engineering School.
 
-Welcome
+# Welcome
 Rebuild of the standard printf function in C. Our project required a function capable of printing with the %d, %c, %s, and %% specifiers to standard output. printf returns the number of characters printed (excluding the null byte at the end of strings). We were not asked to handle flag characters, field width, precision, or length.
 
-Format
+# Format
 Our team chose to add %x ,%X, %b, %o, %u, %r, %R, and %p formatting. We relied on the library we have been building at Alx as well as new concepts gathered during this project.
 
-Supported Format Types
-TYPE - OUTPUT
+# Supported Format Types
+# TYPE - OUTPUT
 
 c - Single character
 
@@ -37,14 +37,14 @@ u - unsigned integer
 
 p - pointer address
 
-Examples
+# Examples
 Character: printf("%c", A); Output:: A
 
 String: printf("%s", This is a string.); Output: This is a string.
 
 Integer: printf("%i", 5); Output: 5
 
-File Functions
+# File Functions:
 _printf.c Own Printf Function Tha Performs Formatted Output Conversion And Print Data.
 
 main.h
@@ -195,7 +195,7 @@ Function That Prints An Integer Begining With 0 And u.
 ev_print_func.c
 Function That Returns The Amount Of Indetifiers.
 
-Authors
+# Authors
 Joy Gundu -@Joiejoie1 and Obumneme Anthony Okoye -@Obumbillions 
 
 End
